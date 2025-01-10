@@ -1,4 +1,5 @@
 Things to set up this project:
+
 1. `npx create-next-app -e with-supabase --use-pnpm`
 2. `cd <project-name>`
 3. Create a supabase project or use an existing one
@@ -8,6 +9,7 @@ Things to set up this project:
 7. Deploy to Vercel
 
 Things to do in this project:
+
 1. Add clerk to project
 2. Remove supabase auth stuff
 3. Add clerk auth stuff
