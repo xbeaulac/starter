@@ -5,6 +5,7 @@ import { peopleInsertSchema, peopleTable } from "@/db/schema";
 import { db } from "@/db/index";
 import { auth as clerkAuth } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
+import { redirect } from "next/navigation";
 
 async function auth() {
   const user = await clerkAuth();
@@ -20,6 +21,7 @@ export async function createPerson(data: z.infer<typeof peopleInsertSchema>) {
     user_id: user.userId,
   });
   console.log("Created person", data);
+  redirect("/");
 }
 
 export async function readPeople() {

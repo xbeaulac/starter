@@ -25,6 +25,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { createPerson } from "@/db/actions";
+import Link from "next/link";
 
 export default function CreatePersonForm() {
   const form = useForm<z.infer<typeof peopleInsertSchema>>({
@@ -98,9 +99,12 @@ export default function CreatePersonForm() {
             </FormItem>
           )}
         ></FormField>
-        <Button className="place-items-end" type="submit">
-          Create person
-        </Button>
+        <div className={"flex justify-end items-center gap-4"}>
+          <Button variant={"secondary"} asChild>
+            <Link href={"/"}>Cancel</Link>
+          </Button>
+          <Button type="submit">Create person</Button>
+        </div>
       </form>
     </Form>
   );
