@@ -9,21 +9,10 @@ export default function ClerkProvider({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const [mounted, setMounted] = useState(false);
-  const { resolvedTheme: theme } = useTheme();
-
-  // // useEffect only runs on the client, so now we can safely show the UI
-  // useEffect(() => {
-  //   setMounted(true);
-  //   console.log(theme);
-  // }, []);
-  //
-  // if (!mounted) {
-  //   return null;
-  // }
+  const { resolvedTheme } = useTheme();
 
   return (
-    <CP appearance={{ baseTheme: theme === "dark" ? dark : undefined }}>
+    <CP appearance={{ baseTheme: resolvedTheme === "dark" ? dark : undefined }}>
       {children}
     </CP>
   );
