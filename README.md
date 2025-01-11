@@ -15,8 +15,8 @@ Things to do in this project:
 3. Remove supabase auth stuff (pretty much all the code)
 4. Connect Clerk to Supabase with [this](https://supabase.com/partners/integrations/clerk)
 5. Add drizzle to project with [this](https://orm.drizzle.team/docs/get-started/supabase-new), used transaction pool url
-6. Create table of people (name, height, age)
-7. Create a table to display the people
-8. Add a form to add people
+6. Create table of people (name, height, age, user_id)
+7. Add a form to create people
+8. Add a table to display the people
 9. Add a form to edit people
 10. Add a button to delete people
