@@ -24,6 +24,7 @@ import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
+import { createPerson } from "@/db/actions";
 
 export default function CreatePersonForm() {
   const form = useForm<z.infer<typeof peopleInsertSchema>>({
@@ -34,14 +35,10 @@ export default function CreatePersonForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof peopleInsertSchema>) {
-    console.log(data);
-  }
-
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(createPerson)}
         className={"w-96 flex flex-col items-end gap-y-8"}
       >
         <FormField
