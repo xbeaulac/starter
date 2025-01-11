@@ -1,0 +1,71 @@
+diff --git a/.idea/drizzle-kit@0.30.1.iml b/.idea/drizzle-kit@0.30.1.iml
+new file mode 100644
+index 0000000000000000000000000000000000000000..24643cc37449b4bde54411a80b8ed61258225e34
+--- /dev/null
++++ b/.idea/drizzle-kit@0.30.1.iml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..03d9549ea8e4ada36fb3ecbc30fef08175b7d728
+--- /dev/null
++++ b/.idea/inspectionProfiles/Project_Default.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
++  </profile>
++</component>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..23eff93190dccfcb712621eb9fcb9f09f9583d86
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/drizzle-kit@0.30.1.iml" filepath="$PROJECT_DIR$/.idea/drizzle-kit@0.30.1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/bin.cjs b/bin.cjs
+index 7357ffe50054bb20d96f228e05d3eeb2d52ecf7c..ad3cb621cd9f7a772f3a5054c18571ba519751e5 100755
+--- a/bin.cjs
++++ b/bin.cjs
+@@ -6295,7 +6295,7 @@ var init_pgSchema = __esm({
+       },
+       squashPolicyPush: (policy4) => {
+         var _a;
+-        return `${policy4.name}--${policy4.as}--${policy4.for}--${(_a = policy4.to) == null ? void 0 : _a.join(",")}--${policy4.on}`;
++        return `${policy4.name}--${policy4.as}--${policy4.for}--${(_a = policy4.to) == null ? void 0 : _a.join(",")}--${policy4.using}--${policy4.withCheck}--${policy4.on}`;
+       },
+       unsquashPolicyPush: (policy4) => {
+         const splitted = policy4.split("--");
+@@ -6303,7 +6303,9 @@ var init_pgSchema = __esm({
+           name: splitted[0],
+           as: splitted[1],
+           for: splitted[2],
+-          to: splitted[3].split(","),
++          to: splitted[3].split(","), 
++          using: splitted[4] !== "undefined" ? splitted[4] : void 0,
++          withCheck: splitted[5] !== "undefined" ? splitted[5] : void 0,
+           on: splitted[4] !== "undefined" ? splitted[4] : void 0
+         };
+       },
