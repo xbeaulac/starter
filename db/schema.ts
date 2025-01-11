@@ -1,14 +1,19 @@
-import { integer, pgPolicy, pgTable, text } from "drizzle-orm/pg-core";
+import { date, integer, pgPolicy, pgTable, text } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import { authenticatedRole } from "drizzle-orm/supabase";
+import {
+  createInsertSchema,
+  createSelectSchema,
+  createUpdateSchema,
+} from "drizzle-zod";
+import { z } from "zod";
 
 export const peopleTable = pgTable(
   "people",
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     name: text().notNull(),
-    age: integer().notNull(),
-    height: integer().notNull(),
+    birthday: date().notNull(),
     user_id: text()
       .notNull()
       .default(sql`requesting_user_id()`),
@@ -28,3 +33,10 @@ export const peopleTable = pgTable(
     }),
   ],
 );
+
+export const peopleSelectSchema = createSelectSchema(peopleTable);
+export const peopleInsertSchema = createInsertSchema(peopleTable, {
+  name: () => z.string().nonempty({ message: "Name is required." }),
+  birthday: (schema) => z.date(),
+});
+export const peopleUpdateSchema = createUpdateSchema(peopleTable);

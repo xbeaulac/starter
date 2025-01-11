@@ -1,9 +1,12 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import CreatePersonForm from "@/app/CreatePersonForm";
 
 export default async function Home() {
   return (
     <>
-      <SignedIn>this is protected</SignedIn>
+      <SignedIn>
+        <CreatePersonForm />
+      </SignedIn>
       <SignedOut>this is public</SignedOut>
     </>
   );
