@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8850f6e0-4fad-4565-bf36-5db3624e658d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/sign-in/[[...sign-in]]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/sign-up/[[...sign-up]]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ClerkProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth-pages)/forgot-password/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth-pages)/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth-pages)/sign-in/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth-pages)/sign-up/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth-pages)/smtp-message.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/actions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/callback/route.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/opengraph-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/protected/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/protected/reset-password/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/twitter-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/deploy-button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/env-var-warning.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/form-message.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header-auth.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/next-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/submit-button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/supabase-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-switcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-switcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tutorial/code-block.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tutorial/connect-supabase-steps.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tutorial/fetch-data-steps.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tutorial/sign-up-user-steps.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tutorial/tutorial-step.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/typography/inline-code.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/supabase/check-env-vars.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/supabase/middleware.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sign-in/[[...sign-in]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-in/[[...sign-in]]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sign-up/[[...sign-up]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-up/[[...sign-up]]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
