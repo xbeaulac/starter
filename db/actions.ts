@@ -4,6 +4,7 @@ import { z } from "zod";
 import { peopleInsertSchema, peopleTable } from "@/db/schema";
 import { db } from "@/db/index";
 import { auth as clerkAuth } from "@clerk/nextjs/server";
+import { eq } from "drizzle-orm";
 
 async function auth() {
   const user = await clerkAuth();
@@ -18,5 +19,15 @@ export async function createPerson(data: z.infer<typeof peopleInsertSchema>) {
     birthday: data.birthday.toISOString(),
     user_id: user.userId,
   });
-  console.log("Person created", data);
+  console.log("Created person", data);
+}
+
+export async function readPeople() {
+  const user = await auth();
+  const people = db
+    .select()
+    .from(peopleTable)
+    .where(eq(peopleTable.user_id, user.userId));
+  console.log("Read people", people);
+  return people;
 }
