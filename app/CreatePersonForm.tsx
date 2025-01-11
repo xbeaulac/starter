@@ -85,6 +85,7 @@ export default function CreatePersonForm() {
                     captionLayout={"dropdown"}
                     mode="single"
                     selected={field.value}
+                    defaultMonth={field.value}
                     onSelect={field.onChange}
                     fromDate={new Date("1900-01-01")}
                     toDate={new Date()}
