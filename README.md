@@ -20,8 +20,7 @@ Each technology is modular can be removed or replaced with your preferred altern
 1. Clone the repository and create a new git repository
 2. [Create a Supabase project](https://database.new) and get the transaction pooling URL by clicking "Connect" at the top
 3. [Create a Clerk project](https://dashboard.clerk.com/apps/new)
-4. Create a Vercel project by clicking Add New... > Project > Import Git Repository
-5. Create a `.env.local` file in the root of the project
+4. Create a `.env.local` file in the root of the project
 ```dotenv
 DATABASE_URL="<supabase_transaction_pooling_url>"
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<public_key>
@@ -30,10 +29,12 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 ```
 
-6. Create a `.env.development.local` file in the root of the project
+5. Create a `.env.development.local` file in the root of the project
 ```dotenv
 DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
 ```
+6. Create a Vercel project by clicking Add New... > Project > Import Git Repository
+
 
 ## Scaffolding with CRUD
 
