@@ -43,8 +43,8 @@ In terms of full stack development, we begin in the backend and end in the front
 Think of a thing in real life whose information you want to interact with (e.g. `Person`) 
 
 Data Model:
-1. In `db/schema.ts`, define the data model for the thing (e.g. `peopleTable`)
-2. Still in `db/schema.ts`, refine the types of the columns and include error messages using Zod
+1. In `db/person.ts`, define the data model for the thing (e.g. `peopleTable`)
+2. Still in `db/person.ts`, refine the types of the columns and include error messages using Zod
 
 Create:
 1. In `db/person.ts`, define the Create operation for the thing (e.g. `createPerson`)

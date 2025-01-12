@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { z } from "zod";
-import { peopleSelectSchema } from "@/db/schema";
+import { peopleSelectSchema } from "@/db/schema/person";
 import {
   DropdownMenu,
   DropdownMenuContent,

@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { peopleInsertSchema } from "@/db/schema";
+import { peopleInsertSchema } from "@/db/schema/person";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
