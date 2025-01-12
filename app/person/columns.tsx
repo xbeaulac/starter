@@ -56,7 +56,9 @@ export const columns: ColumnDef<z.infer<typeof peopleSelectSchema>>[] = [
             </DropdownMenuContent>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogTitle>
+                  Are you sure you want to delete {person.name}?
+                </AlertDialogTitle>
                 <AlertDialogDescription>
                   This action cannot be undone.
                 </AlertDialogDescription>

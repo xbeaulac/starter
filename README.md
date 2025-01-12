@@ -20,3 +20,4 @@ Things to do in this project:
 8. Add a table to display the people
 9. Add a form to edit people
 10. Add a button to delete people
+11. Set up local database

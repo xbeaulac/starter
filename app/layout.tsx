@@ -6,14 +6,9 @@ import "./globals.css";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import ClerkProvider from "./ClerkProvider";
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
-
 export const metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Starter Project made by Xander",
+  description: "The fastest way to build an app.",
 };
 
 const geistSans = Geist({
@@ -40,7 +35,7 @@ export default function RootLayout({
               <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
                 <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
                   <div className="flex gap-4 items-center font-semibold">
-                    <Link href={"/"}>Next.js Supabase Starter</Link>
+                    <Link href={"/"}>Xander's Starter Project</Link>
                   </div>
                   <div className="flex gap-4 items-center">
                     <ThemeSwitcher />
