@@ -48,38 +48,37 @@ Data Model:
 2. Still in `db/schema.ts`, refine the types of the columns and include error messages using Zod
 
 Create:
-3. In `db/actions.ts`, define the Create operation for the thing (e.g. `createPerson`)
-4. In `app/<thing>/Create<thing>Form.tsx`, create a form component to Create the thing
-5. Use this component at `app/<thing>/create/page.tsx`
-6. Use your form and watch it insert data into the database!
+1. In `db/actions.ts`, define the Create operation for the thing (e.g. `createPerson`)
+2. In `app/<thing>/Create<thing>Form.tsx`, create a form component to Create the thing
+3. Use this component at `app/<thing>/create/page.tsx`
+4. Use your form and watch it insert data into the database!
 
 Read:
-7. In `db/actions.ts`, define the Read operation for many things (e.g. `readPeople`)
-8. In `app/<thing>/columns.tsx`, define the columns of a table UI for the thing
-9. In `app/<thing>/page.tsx` (mine is located at `app/SignedInHome.tsx`), create a table UI to see the things
-10. Use your table and watch it read data from the database!
+1. In `db/actions.ts`, define the Read operation for many things (e.g. `readPeople`)
+2. In `app/<thing>/columns.tsx`, define the columns of a table UI for the thing
+3. In `app/<thing>/page.tsx` (mine is located at `app/SignedInHome.tsx`), create a table UI to see the things
+4. Use your table and watch it read data from the database!
 
 Update:
-11. In `db/actions.ts`, define the Read operation for one thing (e.g. `readPerson`)
-12. In `db/actions.ts`, define the Update operation for the thing (e.g. `updatePerson`)
-13. In `app/<thing>/Update<thing>Form.tsx`, create a form component to Update the thing
-14. Use this component at `app/<thing>/[id]/page.tsx`
-15. Use your form and watch it update data in the database!
+1. In `db/actions.ts`, define the Read operation for one thing (e.g. `readPerson`)
+2. In `db/actions.ts`, define the Update operation for the thing (e.g. `updatePerson`)
+3. In `app/<thing>/Update<thing>Form.tsx`, create a form component to Update the thing
+4. Use this component at `app/<thing>/[id]/page.tsx`
+5. Use your form and watch it update data in the database!
 
 Delete:
-16. In `db/actions.ts`, define the Delete operation for the thing (e.g. `deletePerson`)
-17. Create a delete button with an alert dialog in the table UI at `app/<thing>/columns.tsx`
-18. Use your delete button and watch it delete data from the database! 
+1. In `db/actions.ts`, define the Delete operation for the thing (e.g. `deletePerson`)
+2. Create a delete button with an alert dialog in the table UI at `app/<thing>/columns.tsx`
+3. Use your delete button and watch it delete data from the database! 
 
-
-19. Celebrate! 🎉
-20. Repeat!
+Celebrate! 🎉 \
+Repeat!
 
 
 ## Next Steps (The Innovative Part)
 
 Once you have iterated through the CRUD operations, you can change the data you want through the UI. That means you have a fully functional web app! Congratulations! \
-Moving forward, ask your users or yourself what the most _useful_ way to visualize the data would be. _Useful_ frontend features include:
+Moving forward, ask your users or yourself what the most _useful_ way to read the data would be. _Useful_ frontend features include:
 * Pagination, Filtering, and Sorting tables
 * Dashboards
 * Galleries/Grids
