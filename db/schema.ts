@@ -1,4 +1,11 @@
-import { date, integer, pgPolicy, pgTable, text } from "drizzle-orm/pg-core";
+import {
+  date,
+  integer,
+  pgPolicy,
+  pgTable,
+  text,
+  timestamp,
+} from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import { authenticatedRole } from "drizzle-orm/supabase";
 import {
@@ -12,6 +19,8 @@ export const peopleTable = pgTable(
   "people",
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    created_at: timestamp().notNull().defaultNow(),
+    updated_at: timestamp().notNull().defaultNow(),
     name: text().notNull(),
     birthday: date().notNull(),
     user_id: text()

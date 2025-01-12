@@ -8,7 +8,7 @@ import {
 } from "@/db/schema";
 import { db } from "@/db/index";
 import { auth as clerkAuth } from "@clerk/nextjs/server";
-import { and, eq } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 import { redirect } from "next/navigation";
 
 async function auth() {
@@ -33,7 +33,8 @@ export async function readPeople() {
   const people = db
     .select()
     .from(peopleTable)
-    .where(eq(peopleTable.user_id, user.userId));
+    .where(eq(peopleTable.user_id, user.userId))
+    .orderBy(desc(peopleTable.updated_at));
   console.log("Read people");
   return people;
 }
@@ -55,7 +56,11 @@ export async function updatePerson(
   const user = await auth();
   await db
     .update(peopleTable)
-    .set({ ...data, birthday: data.birthday?.toISOString() })
+    .set({
+      ...data,
+      birthday: data.birthday?.toISOString(),
+      updated_at: sql`NOW()`,
+    })
     .where(and(eq(peopleTable.id, id), eq(peopleTable.user_id, user.userId)));
   console.log("Updated person", id);
   redirect("/");
