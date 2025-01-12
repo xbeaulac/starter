@@ -10,6 +10,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";
@@ -27,21 +38,37 @@ export const columns: ColumnDef<z.infer<typeof peopleSelectSchema>>[] = [
       const person = row.original;
       return (
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant={"ghost"} className={"h-8 w-8 p-0"}>
-              <span className={"sr-only"}>Open Menu</span>
-              <MoreHorizontal className={"h-4 w-4"} />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem asChild>
-              <Link href={`/person/${person.id}`}>Edit person</Link>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => deletePerson(person.id)}>
-              Delete person
-            </DropdownMenuItem>
-          </DropdownMenuContent>
+          <AlertDialog>
+            <DropdownMenuTrigger asChild>
+              <Button variant={"ghost"} className={"h-8 w-8 p-0"}>
+                <span className={"sr-only"}>Open Menu</span>
+                <MoreHorizontal className={"h-4 w-4"} />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild>
+                <Link href={`/person/${person.id}`}>Edit person</Link>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <AlertDialogTrigger asChild>
+                <DropdownMenuItem>Delete person</DropdownMenuItem>
+              </AlertDialogTrigger>
+            </DropdownMenuContent>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={() => deletePerson(person.id)}>
+                  Delete
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </DropdownMenu>
       );
     },
