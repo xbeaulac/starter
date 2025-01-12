@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8850f6e0-4fad-4565-bf36-5db3624e658d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,11 @@
     "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "/Users/xanderbeaulac/localdev/starter/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,10 +64,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/ui" />
+      <recent name="$PROJECT_DIR$/app/person" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/(auth-pages)/sign-up" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -82,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736445972827</updated>
       <workItem from="1736445974610" duration="1370000" />
+      <workItem from="1736700426681" duration="3014000" />
     </task>
     <servers />
   </component>
