@@ -1,5 +1,5 @@
 import { readPerson } from "@/db/actions";
-import UpdatePersonForm from "@/app/UpdatePersonForm";
+import UpdatePersonForm from "@/app/person/UpdatePersonForm";
 
 export default async function PersonPage({
   params,
