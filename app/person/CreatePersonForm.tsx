@@ -24,7 +24,7 @@ import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
-import { createPerson } from "@/db/actions";
+import { createPerson } from "@/db/actions/person";
 import Link from "next/link";
 
 export default function CreatePersonForm() {

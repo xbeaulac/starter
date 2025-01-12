@@ -1,4 +1,4 @@
-import { readPerson } from "@/db/actions";
+import { readPerson } from "@/db/actions/person";
 import UpdatePersonForm from "@/app/person/UpdatePersonForm";
 
 export default async function PersonPage({

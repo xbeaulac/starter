@@ -6,7 +6,7 @@ import {
   peopleTable,
   peopleUpdateSchema,
 } from "@/db/schema";
-import { db } from "@/db/index";
+import { db } from "@/db";
 import { auth as clerkAuth } from "@clerk/nextjs/server";
 import { and, desc, eq, sql } from "drizzle-orm";
 import { redirect } from "next/navigation";

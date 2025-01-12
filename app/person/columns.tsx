@@ -24,7 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";
-import { deletePerson } from "@/db/actions";
+import { deletePerson } from "@/db/actions/person";
 
 export const columns: ColumnDef<z.infer<typeof peopleSelectSchema>>[] = [
   { accessorKey: "name", header: "Name" },
