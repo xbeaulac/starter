@@ -7,12 +7,13 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";
-// import { deletePerson } from "@/db/actions";
+import { deletePerson } from "@/db/actions";
 
 export const columns: ColumnDef<z.infer<typeof peopleSelectSchema>>[] = [
   { accessorKey: "name", header: "Name" },
@@ -36,10 +37,10 @@ export const columns: ColumnDef<z.infer<typeof peopleSelectSchema>>[] = [
             <DropdownMenuItem asChild>
               <Link href={`/person/${person.id}`}>Edit person</Link>
             </DropdownMenuItem>
-            {/*<DropdownMenuSeparator />*/}
-            {/*<DropdownMenuItem onClick={() => deletePerson(person.id)}>*/}
-            {/*  Delete person*/}
-            {/*</DropdownMenuItem>*/}
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onClick={() => deletePerson(person.id)}>
+              Delete person
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

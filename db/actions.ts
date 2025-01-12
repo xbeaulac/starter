@@ -10,6 +10,7 @@ import { db } from "@/db/index";
 import { auth as clerkAuth } from "@clerk/nextjs/server";
 import { and, desc, eq, sql } from "drizzle-orm";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 async function auth() {
   const user = await clerkAuth();
@@ -64,4 +65,13 @@ export async function updatePerson(
     .where(and(eq(peopleTable.id, id), eq(peopleTable.user_id, user.userId)));
   console.log("Updated person", id);
   redirect("/");
+}
+
+export async function deletePerson(id: number) {
+  const user = await auth();
+  await db
+    .delete(peopleTable)
+    .where(and(eq(peopleTable.id, id), eq(peopleTable.user_id, user.userId)));
+  console.log("Deleted person", id);
+  revalidatePath("/");
 }
