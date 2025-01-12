@@ -5,6 +5,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "prettier . --write",
+    "db:local": "supabase start",
     "db:push": "drizzle-kit push --config=drizzle-development.config.ts",
     "prod:db:push": "drizzle-kit push --config=drizzle-production.config.ts",
     "db:reset": "supabase db reset; drizzle-kit push --config=drizzle-development.config.ts"
