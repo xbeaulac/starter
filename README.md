@@ -1,6 +1,6 @@
 # Xander's Starter Project
 
-This is a starter project that skips all of the configuration and lets you start iterating immediately.
+This is a starter project that skips all of the setup and configuration and lets you start building immediately.
 
 ### The project is set up with:
 * Formatting [Prettier](https://prettier.io/)
@@ -37,11 +37,10 @@ DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
 
 ## Scaffolding with CRUD
 
-This project is based on the idea that there are only 4 meaning ways to interact with data:
+This project is based on the idea that there are only 4 meaningful ways to interact with data:
 Create, Read, Update, Delete (CRUD). \
 In terms of full stack development, we begin in the backend and end in the frontend. \
-
-Think of a thing in real life whose information you want to interact with (e.g. `Person`) \
+Think of a thing in real life whose information you want to interact with (e.g. `Person`) 
 
 Data Model:
 1. In `db/schema.ts`, define the data model for the thing (e.g. `peopleTable`)
@@ -77,14 +76,15 @@ Repeat!
 
 ## Next Steps (The Innovative Part)
 
-Once you have iterated through the CRUD operations, you can change the data you want through the UI. That means you have a fully functional web app! Congratulations! \
-Moving forward, ask your users or yourself what the most _useful_ way to read the data would be. _Useful_ frontend features include:
-* Pagination, Filtering, and Sorting tables
+Once you can perform CRUD operations through the UI, you have a fully functional web app! Congratulations! \
+Moving forward, ask your users or yourself, "What's the most useful way to read the data?" Useful frontend features include:
+* Robust Forms (File Upload, Segmented Controls, Sliders, etc.)
+* Robust Tables (Pagination, Filtering, Sorting, etc.)
+* Lists or Search Results
+* Galleries or Grids
 * Dashboards
-* Galleries/Grids
 * Charts
 * Maps
-* File uploads
-* Search
-* Infinite scrolling
-* The sky is the limit!
+
+Find the most effective way to read and understand your data. \
+This is the creative part of web development. The sky is the limit! 
