@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8850f6e0-4fad-4565-bf36-5db3624e658d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/drizzle-production.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle-development.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supabase/migrations/20250112170118_remote_schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle-development.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle-development.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle-production.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle-production.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736445972827</updated>
       <workItem from="1736445974610" duration="1370000" />
-      <workItem from="1736700426681" duration="4808000" />
+      <workItem from="1736700426681" duration="9885000" />
     </task>
     <servers />
   </component>

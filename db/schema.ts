@@ -15,6 +15,7 @@ import {
 } from "drizzle-zod";
 import { z } from "zod";
 
+// 1. Drizzle Schema for a Person
 export const peopleTable = pgTable(
   "people",
   {
@@ -43,6 +44,7 @@ export const peopleTable = pgTable(
   ],
 );
 
+// 2. Zod refinements and error messages for the Person schema
 export const peopleSelectSchema = createSelectSchema(peopleTable);
 export const peopleInsertSchema = createInsertSchema(peopleTable, {
   name: () => z.string().nonempty({ message: "Name is required." }),

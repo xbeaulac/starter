@@ -1,23 +1,91 @@
-Things to set up this project:
+# Xander's Starter Project
 
-1. `npx create-next-app -e with-supabase --use-pnpm`
-2. `cd <project-name>`
-3. Create a supabase project or use an existing one
-4. Rename `.env.example` to `.env.local` and fill in your Supabase credentials
-5. `pnpm dev` make sure it's working
-6. Create GitHub repo and push init to git
-7. Deploy to Vercel
+This is a starter project that skips all of the configuration and lets you start iterating immediately.
 
-Things to do in this project:
+### The project is set up with:
+* Formatting [Prettier](https://prettier.io/)
+* Type Safety [TypeScript](https://www.typescriptlang.org/) and [Zod](https://zod.dev/)
+* Meta-framework [Next.js](https://nextjs.org/)
+* Database [Supabase](https://supabase.io/)
+* ORM [Drizzle](https://orm.drizzle.team//)
+* Authentication [Clerk](https://clerk.dev/)
+* Styling [Tailwind CSS](https://tailwindcss.com/)
+* UI [shadcn/ui](https://ui.shadcn.com/)
+* Deployment [Vercel](https://vercel.com/)
 
-1. Add clerk to project with [this](https://clerk.com/docs/quickstarts/nextjs)
-2. Make dedicated pages for sign up and sign in with [this](https://clerk.com/docs/references/nextjs/custom-signup-signin-pages)
-3. Remove supabase auth stuff (pretty much all the code)
-4. Connect Clerk to Supabase with [this](https://supabase.com/partners/integrations/clerk)
-5. Add drizzle to project with [this](https://orm.drizzle.team/docs/get-started/supabase-new), used transaction pool url
-6. Create table of people (name, height, age, user_id)
-7. Add a form to create people
-8. Add a table to display the people
-9. Add a form to edit people
-10. Add a button to delete people
-11. Set up local database
+Each technology is modular can be removed or replaced with your preferred alternative.
+
+## Getting Started
+
+1. Clone the repository and create a new git repository
+2. [Create a Supabase project](https://database.new) and get the transaction pooling URL by clicking "Connect" at the top
+3. [Create a Clerk project](https://dashboard.clerk.com/apps/new)
+4. Create a Vercel project by clicking Add New... > Project > Import Git Repository
+5. Create a `.env.local` file in the root of the project
+```dotenv
+DATABASE_URL="<supabase_transaction_pooling_url>"
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<public_key>
+CLERK_SECRET_KEY=<secret_key>
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+```
+
+6. Create a `.env.development.local` file in the root of the project
+```dotenv
+DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
+```
+
+## Scaffolding with CRUD
+
+This project is based on the idea that there are only 4 meaning ways to interact with data:
+Create, Read, Update, Delete (CRUD). \
+In terms of full stack development, we begin in the backend and end in the frontend. \
+
+Think of a thing in real life whose information you want to interact with (e.g. `Person`) \
+
+Data Model:
+1. In `db/schema.ts`, define the data model for the thing (e.g. `peopleTable`)
+2. Still in `db/schema.ts`, refine the types of the columns and include error messages using Zod
+
+Create:
+3. In `db/actions.ts`, define the Create operation for the thing (e.g. `createPerson`)
+4. In `app/<thing>/Create<thing>Form.tsx`, create a form component to Create the thing
+5. Use this component at `app/<thing>/create/page.tsx`
+6. Use your form and watch it insert data into the database!
+
+Read:
+7. In `db/actions.ts`, define the Read operation for many things (e.g. `readPeople`)
+8. In `app/<thing>/columns.tsx`, define the columns of a table UI for the thing
+9. In `app/<thing>/page.tsx` (mine is located at `app/SignedInHome.tsx`), create a table UI to see the things
+10. Use your table and watch it read data from the database!
+
+Update:
+11. In `db/actions.ts`, define the Read operation for one thing (e.g. `readPerson`)
+12. In `db/actions.ts`, define the Update operation for the thing (e.g. `updatePerson`)
+13. In `app/<thing>/Update<thing>Form.tsx`, create a form component to Update the thing
+14. Use this component at `app/<thing>/[id]/page.tsx`
+15. Use your form and watch it update data in the database!
+
+Delete:
+16. In `db/actions.ts`, define the Delete operation for the thing (e.g. `deletePerson`)
+17. Create a delete button with an alert dialog in the table UI at `app/<thing>/columns.tsx`
+18. Use your delete button and watch it delete data from the database! 
+
+
+19. Celebrate! 🎉
+20. Repeat!
+
+
+## Next Steps (The Innovative Part)
+
+Once you have iterated through the CRUD operations, you can change the data you want through the UI. That means you have a fully functional web app! Congratulations! \
+Moving forward, ask your users or yourself what the most _useful_ way to visualize the data would be. _Useful_ frontend features include:
+* Pagination, Filtering, and Sorting tables
+* Dashboards
+* Galleries/Grids
+* Charts
+* Maps
+* File uploads
+* Search
+* Infinite scrolling
+* The sky is the limit!
