@@ -16,6 +16,20 @@ This is a starter project that skips all of the setup and configuration and lets
 
 Each technology is modular can be removed or replaced with your preferred alternative.
 
+## Project Structure
+
+```plaintext
+app - frontend routes and pages
+components - custom reuseable ui components
+   ui - shadcn/ui reusable ui components
+db - backend
+   schema - database schema (table definitions)
+   actions - functions to interact with the databas
+lib - utility functions
+screenshots - screenshots for the README (you can delete this)
+supabase - supabase local development configuration
+```
+
 ## Getting Started
 
 1. Clone the repository and create a new git repository
@@ -42,18 +56,18 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 5. Back in the Supabase dashboard, your project should be ready. Get the transaction pooling URL by clicking "Connect"
    at the top of the page.
    Copy the URL and paste it into the `DATABASE_URL` field in the `.env.local` file.
-   ![Screenshot 2025-01-12 at 2.45.20 PM.png](Screenshot%202025-01-12%20at%202.45.20%E2%80%AFPM.png)
+   ![screenshot1.png](screenshots/screenshot1.png)
 
 
 6. [Create a Vercel project](https://vercel.com/) by logging in and clicking Add New... > Project. Under "Import Git
    Repository," click "Import" on the repository you created earlier. Copy everything in your `.env.local` file and
    paste it in the "Environment Variables" section. Click "Deploy" to deploy the project. Wait for the project to
    deploy.
-   ![screenshot2.jpg](screenshot2.jpg)
+   ![screenshot2.jpg](screenshots/screenshot2.jpg)
 
 7. In your Vercel project dashboard, go to the "Settings" tab and click "Environment Variables." Click the ellipsis next
    to the "DATABASE_URL" variable and select "Edit." Make sure the variable only affects the Production environment.
-   ![screenshot3.png](screenshot3.png)
+   ![screenshot3.png](screenshots/screenshot3.png)
 
 8. Create a `.env.development.local` file in the root of the project. Copy and paste the following:
 
@@ -64,33 +78,20 @@ DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
 9. In your Vercel project Environment Variables Settings, copy and paste the
    `DATABASE_URL` variable from your new `.env.development.local` file. Make sure the variable only affects
    the Development and Preview environments.
-   ![screenshot4.png](screenshot4.png)
+   ![screenshot4.png](screenshots/screenshot4.png)
 10. This project uses pnpm as its package manager. [Install pnpm](https://pnpm.io/installation) if you don't have
     installed already. Run `pnpm i` to install the dependencies.
 11. Ensure you have [Docker Desktop](https://docs.docker.com/get-started/get-docker/) running. Run `pnpm db:local` to
     start the local Supabase database. This will create a new Docker container with the database instance and will take
     a few
     minutes to initialize.
-12. Run `pnpm db:push` to push the database schema to the local database. This will create the tables in the database.
+12. Run `pnpm db:push` to push the database schema to the local database. This will create the tables in the local
+    database. To push your schema changes to the production database, run `pnpm prod:db:push`.
 13. Run `pnpm dev` to start the development server. Open
     [http://localhost:3000](http://localhost:3000) to view the project in your browser. It's connected to the local
     database you are running.
 
-You can now start building your project. The project is set up with a basic CRUD example. You can find the example
-in the `db/schema/person.ts` file and the `app/person` folder.
-
-## Project Structure
-
-```plaintext
-app - routes and pages for frontend
-components - custom reuseable ui components
-   ui - shadcn/ui reusable ui components
-db - backend
-   schema - database schema (table definitions)
-   actions - functions to interact with the database
-lib - utility functions
-supabase - supabase local development configuration
-```
+You can now start building your project. The project is set up with a basic CRUD example below.
 
 ## Scaffolding with CRUD
 

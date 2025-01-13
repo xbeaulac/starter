@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8850f6e0-4fad-4565-bf36-5db3624e658d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/screenshot1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +75,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/db/schema" />
       <recent name="$PROJECT_DIR$/db/actions" />
       <recent name="$PROJECT_DIR$/components/ui" />
-      <recent name="$PROJECT_DIR$/app/person" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -103,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736445972827</updated>
       <workItem from="1736445974610" duration="1370000" />
-      <workItem from="1736700426681" duration="16948000" />
+      <workItem from="1736700426681" duration="18916000" />
     </task>
     <servers />
   </component>
